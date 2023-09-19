@@ -98,7 +98,7 @@
 <p>Hi Everyone!</p>
 <p>Welcome to this talk: &quot;This is AI&quot;</p>
 <p>AI a term we hear a lot about these days. Every new product seems to include some sort of AI technology. It is all the hype for startups and investors. But ....</p>
-<p>should we be scared of it? Will it take our jobs?? .. does it take over the world?? .. should we worried about a singularity?? ..</p>
+<p>should we be scared of it? Will it take our jobs?? .. will it be more intelligent than us? .. does it take over the world??</p>
 <p>A lot of questions .. but none of them easily answered ..</p>
 <p>So I did the thing that everybody seems to do nowadays: I asked chat-gpt ..</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
@@ -106,7 +106,23 @@
 
 ### th[is] chat-gpt
 
-<img src="images/computer_says_no.png" alt="" style="object-fit: scale-down">
+<div class="block">
+
+<!-- .element: class="fragment" -->
+
+<img src="images/computer_says_no_1.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+
+<div class="block">
+
+<!-- .element: class="fragment" -->
+
+<img src="images/computer_says_no_2.png" alt="" style="object-fit: scale-down">
+
+</div>
+
 
 
 <aside class="notes"><p>So there is your answer .. no we should not fear AI.</p>
@@ -284,7 +300,8 @@ So it seems we, humans, are scared of AI ..</p>
 
 ### th[is] the goal
 
-#todo insert image of a cute little robot sitting with a notepad on its lap
+<img src="images/learning.png" alt="" style="width: 500px; object-fit: fill">
+
 
 <aside class="notes"><p>So that is the goal for this talk; to give you a better understanding of what AI is, how it works, what its strengths and weaknesses are and how you can utilize it.</p>
 <p>This aligns with my personal goal to explain tech in a way that everyone can understand it.</p>
@@ -347,7 +364,7 @@ So it seems we, humans, are scared of AI ..</p>
 
 ### th[is] my disclaimer
 
-<img src="images/disclaimer.png" alt="" style="width: 600px; object-fit: fill">
+<img src="images/lawyer.png" alt="" style="width: 400px; object-fit: fill">
 
 
 <aside class="notes"><p>So you probably noticed that I never mentioned AI in my previous slides ..</p>
@@ -358,14 +375,15 @@ So it seems we, humans, are scared of AI ..</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-### th[is] outlined
+### th[is] the plan
 
 - &shy;<!-- .element: class="fragment" data-fragment-index="1" -->The old way
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Some terminology
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->AI terminology
 - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->The scary stuff
 - &shy;<!-- .element: class="fragment" data-fragment-index="4" -->The magic
 - &shy;<!-- .element: class="fragment" data-fragment-index="5" -->The hard part
-- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->How you can use AI 
+- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->AI in practice
+- &shy;<!-- .element: class="fragment" data-fragment-index="7" -->Conclusion & questions
 
 <aside class="notes"><p>So what can you expect from this talk:</p>
 <ul>
@@ -381,7 +399,8 @@ So it seems we, humans, are scared of AI ..</p>
 
 ### th[is] the old way
 
-#todo insert picture of a robot horse and carriage
+<img src="images/horse.jpeg" alt="" style="width: 300px; object-fit: fill">
+
 
 <aside class="notes"><p>To get an idea of what AI is why it is different, we first need to understand how computers traditionally work: algorithms and programming ..</p>
 <p>Let&#39;s start with &quot;algorithms&quot;:
@@ -696,18 +715,6 @@ The way a neuron converts those inputs to a single output is where the math come
 </aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-### th[is] input
-
-
-<img src="images/square_hole.jpg" alt="" style="object-fit: scale-down">
-
-
-<aside class="notes"><p>A quick note about the inputs: the image recognition is the easiest example .. but already it presents a problem. You have a specific number of input available in your model, so how can you handle images of different size?</p>
-<p>For other input like speech / text the issue is more complicated.</p>
-<p>So in general you have a lot of pre-processing to do on your data before you can even use your model</p>
-</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
 ### th[is] expensive!
 
 
@@ -719,6 +726,18 @@ The way a neuron converts those inputs to a single output is where the math come
 <p>And this does not include the (significant) human engineering time to design / train the model.</p>
 <p>Tesla forecasts to have in excess of 100 exaflops of training compute available in about a year from now. They need this to train their models for full self driving cars. </p>
 <p>In comparison the world fastest supercomputer currently has 1.2 exaflops of compute.</p>
+</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### th[is] input
+
+
+<img src="images/square_hole.jpg" alt="" style="object-fit: scale-down">
+
+
+<aside class="notes"><p>A quick note about the inputs: the image recognition is the easiest example .. but already it presents a problem. You have a specific number of input available in your model, so how can you handle images of different size?</p>
+<p>For other input like speech / text the issue is more complicated.</p>
+<p>So in general you have a lot of pre-processing to do on your data before you can even use your model</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -804,38 +823,32 @@ Although it is not a functioning traffic light; it is an art installation .. but
 <img src="images/magician.jpg" alt="" style="object-fit: scale-down">
 
 
-<aside class="notes"><p>Although we think that as humans we are supperior at recognizing things .. we are also easily fooled. We only have to look at the work of magicians ..</p>
+<aside class="notes"><p>#todo replace image with a better one</p>
+<p>Although we think that as humans we are supperior at recognizing things .. we are also easily fooled. We only have to look at the work of magicians ..</p>
 <p>Not only are we easily fooled .. we like being fooled :-)</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### th[is] all
+
+<img src="images/graduated.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] what we learned
 
 <div class="block">
 
-<!-- .element: class="r-stack" -->
-<div class="block">
+<!-- .element: style="font-size: 0.8em" -->
 
-<!-- .element: class="fragment fade-in-then-out" -->
-
-<img src="https://m.media-amazon.com/images/I/41zpWwdhM-L._SX331_BO1,204,203,200_.jpg" alt="|300" style="width: 300px; object-fit: fill">
-
-
-</div>
-
-
-<div class="block">
-
-<!-- .element: style="font-size: 0.8em" class="fragment fade-in-then-out" -->
-
-- robots  
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->robots  
   => not AI
-- algorithms  
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->algorithms  
   => like recipes  
   => not AI
-- code   
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->code   
   => idiot proof step by step instructions
-- AI  
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->AI  
    => no instructions, learns from data + feedback  
    => done learning after training  
    => easily fooled  
@@ -929,45 +942,49 @@ It only works for very small programs and even then the quality is not good. So 
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-### th[is] useful
+### th[is] ready
 
-#todo insert picture of a just graduated robot
+<div class="block">
 
-<aside class="notes"><p>So far we only looked at the theory. Now let&#39;s have a look at the practical applications of AI</p>
-</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+<!-- .element: style="font-size: 0.6em" -->
 
-### th[is] content
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 25%; width: 30%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
 
-- chat-gpt
-- google bard
-
-#todo examples
-
-<aside class="notes"><p>Explain how this is (mostly) advanced type prediction</p>
-</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-### th[is] beautiful
-
+#### Image generation
+- dall-e
 - midjourney
 - stable diffusion
+- ...
+</div>
+<div class="" style="position: absolute; left: 35%; top: 30%; height: 25%; width: 30%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
 
-#todo examples
+#### Content generation
+- chat-gpt
+- co-pilot
+- edge 
+- ...
+</div>
+<div class="" style="position: absolute; left: 65%; top: 30%; height: 25%; width: 30%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
 
-<aside class="notes"><p>explain how it works</p>
-</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+#### Other applications
+- translations
+- speech to text
+- text to speech
+- ...
+</div>
+
+<aside class="notes"></div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] possible
 
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->color advise based on picture
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->matching paint based on picture
-- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->knowledge base for company specific information
+- color advise based on picture
+- matching paint based on picture
+- internal knowledge base
+- AI customer service 
+- ..
 
-<aside class="notes"><p>This all sounds too good .. so what is wrong with it?</p>
-<p>First of all: this requires a lot of development and training and it is not guaranteed to work
-But more importantly:</p>
+<aside class="notes"><p>While all of this sounds very cool .. I would also like to show you the bad side of AI</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -977,7 +994,9 @@ But more importantly:</p>
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-### th[is] robotic
+### th[is] uncanny
+
+<img src="images/creepy-girl-uncanny-valley.jpg" alt="" style="width: 600px; object-fit: fill">
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -989,25 +1008,31 @@ But more importantly:</p>
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
+### th[is] the internet
+
+<img src="images/vandalized.jpg" alt="" style="width: 600px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
 ### th[is] problematic
 
 - copyright
 - policy
 - costs
-- time
 - scaling
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] a tool
 
-#todo insert picture of a robot in front of a tool rack
+<img src="images/tools.webp" alt="" style="width: 500px; object-fit: fill">
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] scary?
 
-#todo insert picture of a scared robot under a table
+<img src="images/cute.png" alt="" style="width: 400px; object-fit: fill">
+
 
 <div class="block">
 
@@ -1023,7 +1048,8 @@ No!
 
 ### th[is] exciting!
 
-#todo insert picture of an exited jumping robot
+<img src="images/excited.jpg" alt="" style="width: 500px; object-fit: fill">
+
 
 <aside class="notes"><p>Instead I think we should be very excited by the possibilities. I think we are just at the beginning of the AI era.</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
@@ -1032,15 +1058,55 @@ No!
 ### th[is] the end
 
 
-#todo insert picture of a robot crossing the finish line
+<img src="images/finish.png" alt="" style="object-fit: scale-down">
 
-<aside class="notes"><p>And with that we are at the end of this presentation. Thank you all for attending!</p>
+
+<aside class="notes"><p>And with that we are at the end of this presentation.</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] questionable
 
-Any questions?
+<img src="images/questions.jpg" alt="" style="width: 600px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="me drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Thank you!
+
+
+<div class="block">
+
+<!-- .element: style="font-size: 0.6em" -->
+
+<div class="" style="position: absolute; left: 5%; top: 40%; height: 55%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+#### Th[is] Development
+- ❤ software
+- ❤ complex problems
+- ❤ simple solutions
+
+</div>
+
+<div class="" style="position: absolute; left: 35%; top: 40%; height: 55%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+#### Th[is] Support
+- ❤ devops
+- ❤ cloud infrastructure
+- ❤ helping customers
+
+</div>
+
+<div class="" style="position: absolute; left: 65%; top: 40%; height: 55%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+#### Th[is] Creative
+- ❤ creative websites
+- ❤ user experience
+- ❤ design
+
+</div>
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -1049,7 +1115,6 @@ Any questions?
 - [ ] images
 - [ ] cleanup adversarial images
 - [ ] replace all image links with local downloads
-- [ ] black & white emojis?
 - [ ] softer image edge
 </div></script></section></div>
     </div>
