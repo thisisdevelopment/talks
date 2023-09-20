@@ -392,7 +392,8 @@ So it seems we, humans, are scared of AI ..</p>
 <li>Then we get to the scary AI stuff</li>
 <li>Reveal some of the magic</li>
 <li>And see what makes it hard</li>
-<li>And last but not least we will have a look at how you can use AI to your advantage.</div></li>
+<li>And last but not least we will have a look at AI in practice</li>
+<li>After that we hopefully have some time for questions</div></li>
 </ul>
 </aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
@@ -474,6 +475,7 @@ function bubbleSort(elements)
 - computer vision (CV)
 - deep learning 
 - reinforcement learning
+- large language model (LLM)
 
 <aside class="notes"><p>Technically you could make the distinction between every term here .. like </p>
 <ul>
@@ -483,6 +485,7 @@ function bubbleSort(elements)
 <li>NLP is the subset of machine learning that deals with human language</li>
 <li>CV is the subset of machine learning that deals with images / videos</li>
 <li>and deep learning and reinforment learning are ways of implementing AI</li>
+<li>large language models</li>
 </ul>
 <p>But in the non-technical/real world these terms are used interchangeably (and often wrong). So you can forget most of this as in practice this all refers to virtually the same thing: Artifical Intelligence</p>
 <p>But this does not really explain what AI is .. so what is AI?</p>
@@ -632,13 +635,7 @@ if it worked that way
 Yes the field of AI is that old!</p>
 <p>Looking at this image: the circles are neurons and the arrows are the connections between the neurons. Each neuron is connected to the previous column of neurons. A neuron receives a set of input signals and produces a single output signal based on those input signals.
 The way a neuron converts those inputs to a single output is where the math comes in. Without going into details this involves a set of weights, each connection has an associated weight, and a bias.</p>
-<p>So what has changed now that AI is the new hot thing?</p>
-<ul>
-<li>more computing power allowing larger models</li>
-<li>more datasets available</li>
-<li>new architectures</div></li>
-</ul>
-</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] learning
@@ -663,7 +660,7 @@ The way a neuron converts those inputs to a single output is where the math come
 ```txt
 1. present input values
 2. propagate all values
-3. read output values
+3. compare output values
 4. adjust weights & biases
 5. retry until good enough
 ```
@@ -676,7 +673,7 @@ The way a neuron converts those inputs to a single output is where the math come
 ```txt
 1. present input values
 2. propagate all values
-3. read output values
+3. compare output values
 4. adjust weights & biases
 5. retry until good enough
 6. 🙏 it works in the real world
@@ -688,7 +685,6 @@ The way a neuron converts those inputs to a single output is where the math come
 
 <aside class="notes"><p>So how does this learning work?</p>
 <p>In general terms it works like this:</p>
-<p>More accurately: </p>
 <p>And let&#39;s not forget the last step:</p>
 <p>All of this a bit theoretical; so let&#39;s have a look at what this looks like</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
@@ -724,8 +720,8 @@ The way a neuron converts those inputs to a single output is where the math come
 <aside class="notes"><p>So it can be very costly to train / run large models. </p>
 <p>For example for chat-gpt version 4 the hardware costs are estimated to be between 1 and 10 billion dollar. And to run it, the costs are estimated to be between 100 thousand dollar and 1 million dollar per day!</p>
 <p>And this does not include the (significant) human engineering time to design / train the model.</p>
-<p>Tesla forecasts to have in excess of 100 exaflops of training compute available in about a year from now. They need this to train their models for full self driving cars. </p>
-<p>In comparison the world fastest supercomputer currently has 1.2 exaflops of compute.</p>
+<p>Another example: Tesla forecasts to have in excess of 100 exaflops of training compute available in about a year from now. In comparison the world fastest supercomputer (which consists of ~10.000 servers) currently has 1.6 exaflops of compute.  Flops are a means to measure how fast a computer system is, I won&#39;t bore you with the details .. but the important part that, next year, Tesla will need (and have) more than 60 times the compute capacity than the current largest supercomputer in the world in order to train their self driving neural net.</p>
+<p>They recently brought up a part of their new cluster (0.3 exaflops) .. costing them ~300M dollar and earning them a provisional number 4 spot on the supercomputer top 500</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -737,7 +733,7 @@ The way a neuron converts those inputs to a single output is where the math come
 
 <aside class="notes"><p>A quick note about the inputs: the image recognition is the easiest example .. but already it presents a problem. You have a specific number of input available in your model, so how can you handle images of different size?</p>
 <p>For other input like speech / text the issue is more complicated.</p>
-<p>So in general you have a lot of pre-processing to do on your data before you can even use your model</p>
+<p>So in general you have a lot of pre-processing to do on your data before you can even use your model, and if you change something in your pre-processing it (most of the time) would mean you&#39;ll need to completely retrain your model</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -747,8 +743,8 @@ The way a neuron converts those inputs to a single output is where the math come
 
 
 <aside class="notes"><p>Not only can it be expensive; it can also be very hard to deal with the real world .. as it is full of what we, developers, call &quot;edge cases&quot;</p>
-<p>Things that you would not expect to happen; but happen anyways.
-A few examples of this:</p>
+<p>Things that you would not expect to happen; but happen anyways.</p>
+<p>So let&#39;s have a look at some examples of these edge cases:</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -758,7 +754,7 @@ A few examples of this:</p>
 
 
 <aside class="notes"><p>No this is not an AI generated image; this is very real thing in London.
-Although it is not a functioning traffic light; it is an art installation .. but imagine how confusing this is to a model that only has seen actual traffic lights</p>
+Although it is not a functioning traffic light; it is an art installation .. but how would an AI model tell the difference? How you react to seeing this on a roundabout?</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -767,7 +763,8 @@ Although it is not a functioning traffic light; it is an art installation .. but
 <img src="https://pbs.twimg.com/media/E3CiBeWWYAIDU1o.jpg:large" alt="|250" style="width: 250px; object-fit: fill">
 
 
-<aside class="notes"><p>Another example of traffic lights not in their natural environment .. imagine that the AI model that is in control of your self-driving car encounters this .. how will it react?</p>
+<aside class="notes"><p>Another example of traffic lights not in their natural environment .. imagine an AI model that is in control of your self-driving car encounters these traffic lights on a truck .. how will it react?</p>
+<p>But even simple tasks can be complex .. for example you&#39;d think a dog and a muffin are different enough for it to be an easy task for a model to distinguish the to ..</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -776,8 +773,7 @@ Although it is not a functioning traffic light; it is an art installation .. but
 <img src="https://cdn-media-1.freecodecamp.org/images/1*bt-E2YcPafjiPbZFDMMmNQ.jpeg" alt="|600" style="width: 600px; object-fit: fill">
 
 
-<aside class="notes"><p>And sometimes very different things can look very similar .. so is it a dog or a muffin </p>
-<p>Although you might be inclined to question the fact whether a Chihuahua should be called a dog ..</p>
+<aside class="notes"><p>But yeah sometimes the real world is a weird place where a dog an muffin can look very similar ..</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -824,7 +820,7 @@ Although it is not a functioning traffic light; it is an art installation .. but
 
 
 <aside class="notes"><p>#todo replace image with a better one</p>
-<p>Although we think that as humans we are supperior at recognizing things .. we are also easily fooled. We only have to look at the work of magicians ..</p>
+<p>Although we think that as humans we are superior at recognizing things .. we are also easily fooled. We only have to look at the work of magicians ..</p>
 <p>Not only are we easily fooled .. we like being fooled :-)</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
@@ -832,22 +828,26 @@ Although it is not a functioning traffic light; it is an art installation .. but
 ### th[is] all
 
 <img src="images/graduated.png" alt="" style="object-fit: scale-down">
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+
+
+<aside class="notes"><p>This is it .. you now know how AI works ..</p>
+<p>So let&#39;s recap what we have learned:</p>
+</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-### th[is] what we learned
+### th[is] the recap
 
 <div class="block">
 
 <!-- .element: style="font-size: 0.8em" -->
 
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->robots  
-  => not AI
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->algorithms  
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->algorithms  
   => like recipes  
   => not AI
-- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->code   
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->code   
   => idiot proof step by step instructions
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->robots  
+  => not AI
 - &shy;<!-- .element: class="fragment" data-fragment-index="4" -->AI  
    => no instructions, learns from data + feedback  
    => done learning after training  
@@ -922,7 +922,7 @@ Although it is not a functioning traffic light; it is an art installation .. but
 
 <aside class="notes"><p>#todo add axis description</p>
 <p>Well .. </p>
-<p>One is not simply better than the other; AI is more suited for a different subset of problems than tradional programming.</p>
+<p>One is not simply better than the other; AI is more suited for a different subset of problems than traditional programming.</p>
 <p>But doesn&#39;t AI (chat-gpt) allow you to generate code? Or in other words; are software developers obsolete?</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
@@ -935,10 +935,10 @@ Although it is not a functioning traffic light; it is an art installation .. but
 But can't chat-gpt generate all that code for you?
 
 <aside class="notes"><p>Well .. yes LLM&#39;s like chat-gpt can generate code in any language for you. And tools like co-pilot are specifically designed to generate code. </p>
-<p>But from a developer perspective the quality of the generated code is questionable at best and very poor in most cases.
-It only works for very small programs and even then the quality is not good. So we are very long ways off this.</p>
-<p>And no this is not me trying to keep my job; I am all for AI taking over the menial parts of software development, we already have more than enough work on our plates.</p>
-<p>The reality is that AI will increase the need for software developers for the</p>
+<p>But from a developer perspective the quality of the generated code is questionable at best and very poor in most cases. It only works for very small programs and even then the quality is not good. So we are very long ways off this.</p>
+<p>And no this is not me trying to keep my job as a software developer; I am all for AI taking over the menial parts of software development, we already have more than enough work on our plates. And for now that is all what it is capable of.</p>
+<p>The reality (in my opinion) is that AI will vastly increase the need for software developers for the foreseeable future. </p>
+<p>So how can you utilize AI?</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -951,17 +951,19 @@ It only works for very small programs and even then the quality is not good. So 
 <div class="" style="position: absolute; left: 5%; top: 30%; height: 25%; width: 30%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
 
 #### Image generation
-- dall-e
-- midjourney
-- stable diffusion
+- Dall-e
+- Midjourney
+- Stable Diffusion
+- Photoshop (Firefly)
 - ...
 </div>
 <div class="" style="position: absolute; left: 35%; top: 30%; height: 25%; width: 30%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
 
 #### Content generation
-- chat-gpt
-- co-pilot
-- edge 
+- Chat-GPT
+- GitHub Copilot
+- Microsoft Edge 
+- Google Bard
 - ...
 </div>
 <div class="" style="position: absolute; left: 65%; top: 30%; height: 25%; width: 30%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
@@ -970,63 +972,122 @@ It only works for very small programs and even then the quality is not good. So 
 - translations
 - speech to text
 - text to speech
+- search
 - ...
 </div>
 
-<aside class="notes"></div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<aside class="notes"><p>I am probably forgetting tons of tools here, but there are a lot of tools ready for you to try out</p>
+</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] possible
 
-- color advise based on picture
-- matching paint based on picture
-- internal knowledge base
+- Color advise based on picture
+- Matching paint based on picture
+- Internal knowledge base
 - AI customer service 
-- ..
+- Content generation
 
-<aside class="notes"><p>While all of this sounds very cool .. I would also like to show you the bad side of AI</p>
+<aside class="notes"><p>So what about Akzo specific use cases? Well I can think of a few .. (see list) .. but probably you&#39;ll have a lot more ideas ..</p>
+<p>While all of these ideas sound very cool and every sales pitch will probably tell you that this is easily done and you must use AI not to fall behind ..</p>
+<p>I think is it good to have look at some of the problems the you can come across when using AI ..</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] hallucinating
 
 <img src="images/halucinating.jpeg" alt="" style="width: 400px; object-fit: fill">
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+
+
+<aside class="notes"><p>Yes this an actual technical term used in the context of AI ..</p>
+<p>It is used to describe the situation where the AI gives responses that are not grounded in reality, it just predicts the output based on your input .. no fact checking is done .. and it gives you no indication the response can be wrong</p>
+<p>Imagine your customer service AI that accidentally suggests the wrong primer or the wrong type of paint .. who would be responsible for the damages?</p>
+</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] uncanny
 
 <img src="images/creepy-girl-uncanny-valley.jpg" alt="" style="width: 600px; object-fit: fill">
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+
+
+<aside class="notes"><p>Looking at this picture; you&#39; notice something is off .. you cannot really identify it .. for a computer generated image it does look good .. but it still feel off. </p>
+<p>In computer graphics there is a term for that &quot;the uncanny valley&quot;, when a character is very much human like, but you don&#39;t feel it, or it even feels scary</p>
+<p>The same can be true for AI .. for example when you look at most of the output of chat-gpt; you&#39;ll go: this is cool/impressive; but you would not mistake it for something a human have written .. </p>
+<p>So ask yourself: how would you feel as a customer if the customer service agent is an AI? What would lead to a better customer experience .. an AI that maybe gives the right answer and is always available, but does not always give your customers a good feeling.</p>
+<p>I even saw the first resumes from candidates that were clearly generated by some AI .. not the best start, if you ask me ..</p>
+</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-### th[is] not consistent
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+### th[is] overfitted
+
+<img src="images/works_for_me.jpg" alt="" style="width: 500px; object-fit: fill">
+
+
+<aside class="notes"><p>Another issue that can arise is overfitting of your models.</p>
+<p>When you train models, it&#39;ll teach them to give the right answer for all your examples. But it can be that your dataset did not include enough variation or that the architecture of your neural net does not fit the task.</p>
+<p>This will lead to what we call overfitted models. Where only the examples (or closely related input) will result in the desired output. </p>
+<p>So all your tests will succeed but once your start to get real world input .. it all falls apart.</p>
+</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] time consuming
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+
+<img src="images/time_consuming.png" alt="" style="object-fit: scale-down">
+
+
+<aside class="notes"><p>I have a confession to make: I wanted to use AI image generation for all of the images used in the presentation .. I had an idea of the look and feel and for most images I had a good idea of what I wanted.</p>
+<p>So it should be relatively easy to generate the prompts for these images right??</p>
+<p>Well that appears to be not so simple .. I tested different products (mid-journey, stable diffusion and more) .. and while some give some really nice results, it takes a lot of trail-and-error to get to that point .. and even changing little things can get you way of your goal</p>
+<p>So what I did in do in the end: I used google image search to find AI generated images that worked for me :-)</p>
+</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] the internet
 
 <img src="images/vandalized.jpg" alt="" style="width: 600px; object-fit: fill">
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+
+
+<aside class="notes"><p>This is the internet .. and if there is a way to misuse / vandalize a system, it is not a question wether it will be done, but when it will be done. Spoiler: in most cases it only takes hours .. </p>
+<p>A few real examples of this:</p>
+<ul>
+<li>chatbot turns racist
+=&gt; microsoft released an AI chatbot that used the input to learn, and within days it turned racist</li>
+<li>chatbot gaslights journalist into leaving his wife
+=&gt; when microsoft released bing chat, it tried to convince a journalist he should leave his wife</li>
+</ul>
+<p>Other possible scenarios are:</p>
+<ul>
+<li>AI bots impersonating brands on social media</li>
+<li>AI used to generate better spam messages / fake ads</li>
+<li>Exposing credentials / confidential information because they ended up in a training dataset (eg: co-pilot)</div></li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] problematic
 
-- copyright
-- policy
-- costs
-- scaling
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+- Copyright
+- Costs/Scaling
+
+<aside class="notes"><p>Besides all these issues we have a few more that I will briefly touch on:</p>
+<p><strong>Copyright</strong></p>
+<p>Copyright in the case of LLM&#39;s and image generation is a largely unanswered question .. 
+but I do have a personal take on this (I am not a lawyer, so don&#39;t take this as advise): how is it different from taking inspiration from a book / paint you saw .. basically the AI is doing the same</p>
+<p><strong>Costs/scaling</strong> </p>
+<p>using AI for personal stuff is different than using it scale .. including an AI chatbot on a popular website could require significant resources.</p>
+</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] a tool
 
 <img src="images/tools.webp" alt="" style="width: 500px; object-fit: fill">
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+
+
+<aside class="notes"><p>So what is my advise regarding AI? Don&#39;t use it as it has so many problems?</p>
+<p>No.</p>
+<p>I look at it as a tool .. and like every tool, it has it uses, but I won&#39;t use it for everything. I use it where it makes sense. I try to keep an open mind .. </p>
+<p>Hopefully this presentation gives you the background to make informed decisions or at least a starting point to dig deeper and learn more.</p>
+</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 ### th[is] scary?
@@ -1042,7 +1103,7 @@ No!
 
 <aside class="notes"><p>So to come back to our original question: should we be scared of AI ..</p>
 <p>Well I can&#39;t speak for you .. but in my opinion:</p>
-<p>No!</p>
+<p>No! But as with everything it has some pro&#39;s and con&#39;s .. some problems are more suited for it than others .. but having this new tool available is exciting!</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -1051,7 +1112,7 @@ No!
 <img src="images/excited.jpg" alt="" style="width: 500px; object-fit: fill">
 
 
-<aside class="notes"><p>Instead I think we should be very excited by the possibilities. I think we are just at the beginning of the AI era.</p>
+<aside class="notes"><p>I think we are just seeing the tip of the iceberg of possibilities ..</p>
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -1065,10 +1126,14 @@ No!
 </div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-### th[is] questionable
+### th[is] up to you
 
 <img src="images/questions.jpg" alt="" style="width: 600px; object-fit: fill">
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="me drop" -->
+
+
+<aside class="notes"><p>The rest is up to you .. what opportunities do you see? What hurdles? .. or do you have some questions first?</p>
+<p>In that case let&#39;s hear them! And I will try my best to answer them.</p>
+</div></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="me drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 # Thank you!
@@ -1110,12 +1175,13 @@ No!
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-### th[is] not done
+### th[is] todo
 
-- [ ] images
 - [ ] cleanup adversarial images
 - [ ] replace all image links with local downloads
-- [ ] softer image edge
+- [ ] softer image edge interferes with text in images
+- [ ] slide title not centered
+- [ ] add this image to published presentation
 </div></script></section></div>
     </div>
 
