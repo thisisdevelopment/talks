@@ -96,7 +96,7 @@ body, .reveal-viewport {
 .slides {
   border: 1px solid white;
   border-radius: 20px;
-  background-image: url(/images/this-triangle-only.svg);
+  background-image: url(images/this-triangle-only.svg);
   background-repeat: no-repeat;
   background-position: bottom 20px right 20px;
   background-size: 50px;
